@@ -1,0 +1,113 @@
+
+.container{
+    width: 100% - 10px;
+    height: 500px;
+    border: 1px solid black;
+    background-image: linear-gradient(rgb(147, 147, 234), rgb(175, 175, 201));
+    position: relative;
+    overflow: hidden;
+    border-bottom: 15px solid green;
+}
+
+.cano{
+    position: absolute;
+    bottom: 0;
+    width: 70px;
+    animation: movimentoCano 1s infinite linear;
+}
+
+.nuvens{
+    position: absolute;
+    width: 300px;
+    padding-top: 20px;
+    animation: movimentoNuvens 7s infinite linear;
+}
+
+.mario{
+    position: absolute;
+    bottom: 0px;
+    width: 70px;
+    padding-left: 15px;
+}
+
+.pular{
+    animation: pulo 500ms ease-out;
+}
+
+.divPontos{
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 3px;
+    height: 40px;
+    max-width: 200px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pontos{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.gameOver{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.774);
+    color: white;
+    font-family: 'Righteous', sans-serif;
+    font-size: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.btn{
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 50px;
+    background-color: rgb(201, 201, 29);
+    color: aliceblue;
+    border-color: aliceblue;
+}
+
+.btn:hover{
+    background-color: rgb(247, 247, 6);
+    color: black;
+    border-color: black;
+}
+
+@keyframes movimentoCano {
+    from {left: 150%;}
+    to {left: -17%;}
+}
+
+@keyframes movimentoNuvens {
+    from {left: 150%;}
+    to {left: -50%;}
+}
+
+@keyframes pulo {
+    0%{
+        bottom: 0px;
+    }
+
+    50%{
+        bottom: 150px;
+    }
+
+    100%{
+        bottom: 0px;
+    }
+}
+
